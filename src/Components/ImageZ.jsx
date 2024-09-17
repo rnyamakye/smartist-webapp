@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dialog, DialogBody, Card } from "@material-tailwind/react";
 
 const ImageZ = ({ src, alt, name, description, className }) => {
@@ -11,13 +11,13 @@ const ImageZ = ({ src, alt, name, description, className }) => {
       className={`relative overflow-hidden shadow-lg border-none rounded-lg ${className}`}
     >
       <Card
-        className="w-full cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
+        className="w-[100%] h-[100%] cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
         onClick={handleOpen}
       >
         <img
           src={src}
           alt={alt}
-          className={`object-cover sm:w-full sm:h-full transform transition duration-500 hover:scale-125`}
+          className={`object-cover w-full h-[100%] transform transition duration-500 hover:scale-125`}
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>

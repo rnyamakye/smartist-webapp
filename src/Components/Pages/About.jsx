@@ -11,7 +11,6 @@ import ImageZ from "../ImageZ";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
 import FAQSection from "../FAQSection";
-import SmoothScroll from "../SmoothScroll";
 
 export default function About() {
   useEffect(() => {
@@ -19,38 +18,40 @@ export default function About() {
   }, []);
 
   return (
-    <SmoothScroll>
+    <>
       <main className="relative sm:-top-[100px] lg:-top-[120px]">
-        <header className="">
-          <div className="header-container sm:text-white sm:pt-[200px] sm:pb-[50px] lg:py-[250px] flex flex-col gap-10 sm:px-5">
-            <motion.div
-              variants={fadeIn("up", 0)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.1 }}
-              className="sm:text-center flex flex-col gap-10"
-            >
-              <h1 className="sm:text-4xl lg:text-5xl sm:text-center font-semibold leading-snug">
-                Meet the Artist behind Smartist
-              </h1>
-              <p className="sm:sm:text-lg sm:text-gray-400">
-                Discover the journey and achievements of our talented pencil
-                artist.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.1 }}
-              className="sm:text-center flex flex-col gap-10 lg:hidden sm:block"
-            >
-              <Image src="/smartist-poster-1.jpg" />
-            </motion.div>
+        <header className="header-container">
+          <div className=" flex justify-center">
+            <div className=" sm:text-white sm:pt-[200px] sm:pb-[50px] lg:py-[250px] md:py-[200px] flex flex-col gap-10 max-w-[90%]">
+              <motion.div
+                variants={fadeIn("up", 0)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.1 }}
+                className="sm:text-center flex flex-col gap-10"
+              >
+                <h1 className="sm:text-4xl lg:text-5xl sm:text-center font-semibold leading-snug">
+                  Meet the Artist behind Smartist
+                </h1>
+                <p className="sm:sm:text-lg sm:text-gray-400">
+                  Discover the journey and achievements of our talented pencil
+                  artist.
+                </p>
+              </motion.div>
+              <motion.div
+                variants={fadeIn("up", 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.1 }}
+                className="sm:text-center flex flex-col gap-10 md:hidden lg:hidden sm:block"
+              >
+                <Image src="/smartist-poster-1.jpg" />
+              </motion.div>
+            </div>
           </div>
         </header>
-        <section className="sm:px-5 lg:px-10 sm:py-[50px] relative">
-          <div className="about-hero-container sm:flex-col grid  sm:gap-16 lg:gap-5">
+        <section className="sm:px-5 lg:px-10 sm:py-[50px] relative flex justify-center">
+          <div className="about-hero-container sm:flex-col grid sm:gap-16 lg:gap-5">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -76,7 +77,7 @@ export default function About() {
               viewport={{ once: true, amount: 0.1 }}
               className="container-2 lg:w-[50vw] sm:w-full "
             >
-              <ImageZ src="/public/smartist-with-customer.jpg" />
+              <ImageZ src="/smartist-with-customer.jpg" />
             </motion.div>
 
             <div className="container-3 flex-col flex gap-20">
@@ -134,7 +135,7 @@ export default function About() {
                   className="flex gap-5 "
                 >
                   <FaEye />
-                  <div>
+                  <div id="attention">
                     <h3 className="sm:text-black text-lg">
                       Attention to Detail
                     </h3>
@@ -185,11 +186,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ
-                  src="/public/commmissioned-portrait-5.JPG"
-                  description="Nature"
-                  name="Nature Sketches"
-                />
+                <ImageZ src="/commmissioned-portrait-5.JPG" />
               </motion.div>
               <motion.div
                 variants={fadeIn("right", 0.6)}
@@ -198,11 +195,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ
-                  src="/public/commmissioned-portrait-34.JPG"
-                  description="Nature"
-                  name="Nature Sketches"
-                />
+                <ImageZ src="/commmissioned-portrait-34.JPG" />
               </motion.div>
               <motion.div
                 variants={fadeIn("right", 0.7)}
@@ -211,11 +204,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ
-                  src="/public/commmissioned-portrait-23.jpg"
-                  description="Nature"
-                  name="Nature Sketches"
-                />
+                <ImageZ src="/commmissioned-portrait-23.jpg" />
               </motion.div>
               <motion.div
                 variants={fadeIn("right", 0.8)}
@@ -224,11 +213,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ
-                  src="/public/commmissioned-portrait-9.JPG"
-                  description="Nature"
-                  name="Nature Sketches"
-                />
+                <ImageZ src="/commmissioned-portrait-9.JPG" />
               </motion.div>
             </div>
           </div>
@@ -249,7 +234,7 @@ export default function About() {
                 Impressive milestones in the artist's career.
               </p>
             </motion.div>
-            <div className="flex lg:flex-row sm:flex-col gap-5 justify-around ">
+            <div className="sm:grid-cols-3 grid sm:grid-rows-1 lg:grid-cols-1 lg:grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-10 ">
               <AchievementCard
                 icon={<FaAward />}
                 count="50+"
@@ -284,7 +269,7 @@ export default function About() {
                 Meet the creative minds who have collaborated with our artist.
               </p>
             </motion.div>
-            <div className="flex sm:flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 sm:gap-10 ">
+            <div className="grid sm:grid-cols-1 sm:grid-rows-3 lg:grid lg:grid-cols-2 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 sm:gap-10 ">
               <motion.div
                 variants={fadeIn("up", 0.5)}
                 initial="hidden"
@@ -348,7 +333,7 @@ export default function About() {
               viewport={{ once: true, amount: 0.1 }}
             >
               <iframe
-                className="sm:w-full sm:h-[200px] rounded-xl border-none lg:w-[40vw] lg:h-[300px] "
+                className="sm:w-full sm:h-[200px] md:w-[60vw] md:h-[40vw] rounded-xl border-none lg:w-[40vw] lg:h-[300px] "
                 src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                 title="YouTube video"
                 allowFullScreen
@@ -362,12 +347,12 @@ export default function About() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.1 }}
-            className=""
+            id="FAQsection"
           >
             <FAQSection />
           </motion.div>
         </section>
       </main>
-    </SmoothScroll>
+    </>
   );
 }

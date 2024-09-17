@@ -4,7 +4,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
 import ImageZ from "../ImageZ";
-import SmoothScroll from "../SmoothScroll";
 
 const CustomerImages = ({ title, src }) => {
   return (
@@ -33,39 +32,44 @@ const Community = () => {
   }, []);
   const customers = [
     {
-      src: "/public/satisfied-costumer-2.jpg",
+      src: "/satisfied-costumer-2.jpg",
       // description:
       //   "A night scene showing a swirling night sky over a sleeping village.",
     },
     {
-      src: "/public/satisfied-costumer-3.jpg",
+      src: "/satisfied-costumer-3.jpg",
       // description:
       //   "Surrealist painting featuring melting clocks in a desert landscape.",
     },
     {
-      src: "/public/satisfied-costumer-5.jpg",
+      src: "/satisfied-costumer-5.jpg",
       // description:
       //   "A portrait of a girl wearing an exotic dress and a large pearl earring.",
     },
     {
-      src: "/public/satisfied-costumer-6.WEBP",
+      src: "/satisfied-costumer-6.WEBP",
       // description:
       //   "An expressionist painting depicting an agonized figure against a landscape.",
     },
     {
-      src: "/public/satisfied-costumer-4.jpg",
+      src: "/satisfied-costumer-4.jpg",
       // description:
       //   "A Renaissance masterpiece depicting the goddess Venus emerging from the sea.",
     },
     {
-      src: "/public/Artist-holding-commissioned-portrait-1.JPG",
+      src: "/Artist-holding-commissioned-portrait-1.JPG",
+      // description:
+      //   "A large 17th-century painting famous for its dramatic use of light and shadow.",
+    },
+    {
+      src: "/satisfied-costumer-6.jpg",
       // description:
       //   "A large 17th-century painting famous for its dramatic use of light and shadow.",
     },
   ];
 
   return (
-    <SmoothScroll>
+    <>
       <main>
         <div className=" relative -top-[100px] ">
           <header className="header-container py-[200px] lg:px-10 sm:px-5">
@@ -98,7 +102,7 @@ const Community = () => {
             </div>
           </header>
           <section className="py-[100px] lg:px-10 sm:px-5">
-            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 sm:px-5">
+            <div className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 sm:px-5">
               {customers.map((artwork, index) => (
                 <CustomerImages key={index} {...artwork} />
               ))}
@@ -127,6 +131,8 @@ const Community = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="flex items-center gap-5 text-center justify-center text-xl text-black"
               >
                 Commission yours now <FaArrowRight className="text-lg" />
@@ -135,7 +141,7 @@ const Community = () => {
           </section>
         </div>
       </main>
-    </SmoothScroll>
+    </>
   );
 };
 

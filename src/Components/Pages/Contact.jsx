@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
 import { fadeIn } from "../Variants";
 import emailjs from "@emailjs/browser";
-import SmoothScroll from "../SmoothScroll";
+
 
 const Contact = () => {
   useEffect(() => {
@@ -33,8 +33,8 @@ const Contact = () => {
   };
 
   return (
-    <SmoothScroll>
-      <main className="container mx-auto px-4 py-[50px]">
+    <>
+      <main className="container mx-auto px-4 py-[50px] md:py-[120px]">
         <motion.h1
           variants={fadeIn("up", 0.5)}
           initial="hidden"
@@ -98,14 +98,16 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 type="submit"
                 value="Send"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-1 hover:bg-primary-2"
               >
                 Send Message
                 <Send className="ml-2 h-4 w-4" />
-              </button>
+              </motion.button>
             </form>
           </motion.div>
 
@@ -133,7 +135,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </main>
-    </SmoothScroll>
+    </>
   );
 };
 

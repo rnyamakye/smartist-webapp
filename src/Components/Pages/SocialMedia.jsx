@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import ProfileCard from "../ProfileCard";
 import { fadeIn } from "../Variants";
-import SmoothScroll from "../SmoothScroll";
 
 const socialMediaProfiles = [
   {
@@ -48,7 +47,7 @@ const SocialMediaProfiles = () => {
   }, []);
 
   return (
-    <SmoothScroll>
+    <>
       <main className="relative sm:-top-[100px]">
         <header className="header-container text-gray-200 relative sm:py-[200px]">
           <div>
@@ -89,7 +88,7 @@ const SocialMediaProfiles = () => {
           </div>
         </div>
       </main>
-    </SmoothScroll>
+    </>
   );
 };
 

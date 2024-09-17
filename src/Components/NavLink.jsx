@@ -1,5 +1,5 @@
 // src/NavLink.js
-import React from "react";
+
 import { useLocation, Link } from "react-router-dom";
 
 const NavLink = ({ to, children }) => {
@@ -10,9 +10,7 @@ const NavLink = ({ to, children }) => {
     <Link
       to={to}
       className={`flex gap-5 font-semibold ${
-        isActive
-          ? "text-primary-1 font-bold"
-          : "text-gray-400 "
+        isActive ? "text-primary-1 font-bold" : "text-gray-400 "
       }`}
     >
       {children}

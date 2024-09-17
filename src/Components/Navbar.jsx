@@ -8,10 +8,10 @@ export default function Navbar() {
   return (
     <nav
       className="relative
-     top-5 left-0 p-2 lg:py-1 w-[90%] bg-primary-2 opacity-95 sm:px-5 rounded-full shadow-md z-50"
+     top-5 left-0 p-1 lg:py-1 w-[90%] bg-primary-2 opacity-95 sm:px-5 rounded-full shadow-md z-50"
     >
       <div className="">
-        <div className=" flex flex-row border-gray-900 rounded-full py-3 items-center lg:text-2xl sm:text-2xl  md:text-2xl  justify-between">
+        <div className=" flex flex-row border-gray-900 rounded-full py-2 items-center lg:text-2xl sm:text-2xl  md:text-2xl  justify-between">
           <Link to="/">
             <motion.div
               whileHover={{ scale: 1.1 }}
