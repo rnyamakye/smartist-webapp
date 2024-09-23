@@ -4,7 +4,6 @@ import { Send, Phone, Mail, MapPin } from "lucide-react";
 import { fadeIn } from "../Variants";
 import emailjs from "@emailjs/browser";
 
-
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,7 +65,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="from_name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                  className="mt-1 block w-full p-2 rounded-md border-gray-300 shadow-sm"
                   required
                 />
               </div>
@@ -81,7 +80,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="from_email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                  className="mt-1 block w-full p-2 rounded-md border-gray-300 shadow-sm"
                   required
                 />
               </div>
@@ -94,7 +93,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="message"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                  className="mt-1 block w-full h-[100px] rounded-md border-gray-300 shadow-sm"
                   required
                 />
               </div>

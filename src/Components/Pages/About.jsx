@@ -13,9 +13,9 @@ import { fadeIn } from "../Variants";
 import FAQSection from "../FAQSection";
 
 export default function About() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <>
@@ -45,13 +45,13 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className="sm:text-center flex flex-col gap-10 md:hidden lg:hidden sm:block"
               >
-                <Image src="/smartist-poster-1.jpg" />
+                <Image src="https://d2oe4z990jupbo.cloudfront.net/smartist-poster-1.jpg" />
               </motion.div>
             </div>
           </div>
         </header>
         <section className="sm:px-5 lg:px-10 sm:py-[50px] relative flex justify-center">
-          <div className="about-hero-container sm:flex-col grid sm:gap-16 lg:gap-5">
+          <div className="about-hero-container sm:flex-col grid sm:gap-16 max-w-[90%] lg:gap-5">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -75,9 +75,9 @@ export default function About() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.1 }}
-              className="container-2 lg:w-[50vw] sm:w-full "
+              className="container-2 lg:w-[45vw] sm:w-full "
             >
-              <ImageZ src="/smartist-with-customer.jpg" />
+              <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/smartist-with-customer.jpg" />
             </motion.div>
 
             <div className="container-3 flex-col flex gap-20">
@@ -132,9 +132,9 @@ export default function About() {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: true, amount: 0.1 }}
-                  className="flex gap-5 "
+                  className="flex gap-5 items-center"
                 >
-                  <FaEye />
+                  <FaEye className="text-brown-500" />
                   <div id="attention">
                     <h3 className="sm:text-black text-lg">
                       Attention to Detail
@@ -162,8 +162,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="sm:px-5 lg:px-10 sm:py-[50px] lg:pt-[0] lg:pb-[100px]">
-          <div className="flex flex-col sm:gap-10 lg:gap-20">
+        <section className="sm:px-5 flex flex-col items-center sm:py-[50px] lg:pt-[0] lg:pb-[100px]">
+          <div className="flex flex-col sm:gap-10 lg:gap-20 lg:max-w-[90%]">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -186,7 +186,16 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ src="/commmissioned-portrait-5.JPG" />
+                <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-27.jpg" />
+              </motion.div>
+              <motion.div
+                variants={fadeIn("right", 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.1 }}
+                className=""
+              >
+                <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-5.JPG" />
               </motion.div>
               <motion.div
                 variants={fadeIn("right", 0.6)}
@@ -195,16 +204,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ src="/commmissioned-portrait-34.JPG" />
-              </motion.div>
-              <motion.div
-                variants={fadeIn("right", 0.7)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.1 }}
-                className=""
-              >
-                <ImageZ src="/commmissioned-portrait-23.jpg" />
+                <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-34.JPG" />
               </motion.div>
               <motion.div
                 variants={fadeIn("right", 0.8)}
@@ -213,13 +213,13 @@ export default function About() {
                 viewport={{ once: true, amount: 0.1 }}
                 className=""
               >
-                <ImageZ src="/commmissioned-portrait-9.JPG" />
+                <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-9.JPG" />
               </motion.div>
             </div>
           </div>
         </section>
         <section className="sm:px-5 lg:px-10 sm:p-[50px]">
-          <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-20 lg:px-20">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -234,7 +234,7 @@ export default function About() {
                 Impressive milestones in the artist's career.
               </p>
             </motion.div>
-            <div className="sm:grid-cols-3 grid sm:grid-rows-1 lg:grid-cols-1 lg:grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-10 ">
+            <div className="grid sm:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-3 md:grid-rows-1 sm:grid-cols-1 gap-10 ">
               <AchievementCard
                 icon={<FaAward />}
                 count="50+"
@@ -255,7 +255,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="sm:px-5 lg:px-10 sm:py-[50px]">
+        <section className="sm:px-5 lg:px-10 sm:py-[50px] ">
           <div className="flex flex-col sm:gap-10 lg:gap-20">
             <motion.div
               variants={fadeIn("up", 0.5)}

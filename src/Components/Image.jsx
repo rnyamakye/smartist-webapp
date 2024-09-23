@@ -8,7 +8,7 @@ const Image = ({ src, alt, name, description, title, className }) => {
 
   return (
     <div
-      className={`relative overflow-hidden flex sm:flex-col lg:flex-row gap-5 border-none rounded-lg ${className}`}
+      className={`relative overflow-hidden flex sm:flex-col lg:flex-row gap-5 border-none rounded-3xl ${className}`}
     >
       <Card
         className="w-full cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
@@ -17,14 +17,14 @@ const Image = ({ src, alt, name, description, title, className }) => {
         <img
           src={src}
           alt={alt}
-          className="object-cover sm:w-full rounded-3xl cursor-pointer"
+          className="object-cover sm:w-full  cursor-pointer"
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>
         <DialogBody>
           <img
             alt={alt}
-            className="h-full w-fullrounded-lg object-cover object-center"
+            className="h-full w-full rounded-lg object-cover object-center"
             src={src}
           />
         </DialogBody>

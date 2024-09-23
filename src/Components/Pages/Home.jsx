@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <main className="relative sm:-top-[100px] lg:-top-[120px]">
         <header className="header-container sm:pt-[200px] sm:pb-[50px] lg:pt-[250px] sm:text-center text-white flex justify-center">
-          <div className="flex sm:flex-col gap-14 lg:flex-row lg:items-start max-w-[90%]">
+          <div className="flex sm:flex-col gap-14 lg:flex-row lg:items-start max-w-[85%]">
             <div className="flex flex-col sm:gap-14 lg:gap-10 sm:justify-center sm:text-center lg:text-start lg:items-start sm:items-center">
               <motion.div
                 variants={fadeIn("up", 0.3)}
@@ -73,7 +73,7 @@ export default function Home() {
               className=""
             >
               <Image
-                src="/satisfied-costumer-2.jpg"
+                src="https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-2.jpg"
                 alt="Header-src"
                 className="rounded-2xl lg:h-[600px] object-contain sm:w-full lg:w-[45vw]"
               />
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </header>
         <section className="sm:text-center sm:py-[50px] lg:py-[100px] flex justify-center">
-          <div className="gap-20 flex sm:flex-col max-w-[90%]">
+          <div className="gap-20 flex sm:flex-col max-w-[85%]">
             <div className="px-5 flex sm:flex-col gap-10">
               <motion.div
                 variants={fadeIn("up", 0.3)}
@@ -101,7 +101,7 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <ImageZ
-                    src="/commmissioned-portrait-19.JPG"
+                    src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-19.JPG"
                     description="Portait"
                   />
                 </motion.div>
@@ -112,7 +112,7 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <ImageZ
-                    src="/realistic-eye.JPG"
+                    src="https://d2oe4z990jupbo.cloudfront.net/realistic-eye.JPG"
                     description="Abstract Art"
                     className="w-full h-full"
                   />
@@ -124,7 +124,7 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <ImageZ
-                    src="/commmissioned-portrait-17.JPG"
+                    src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-17.JPG"
                     description="Animal Portait"
                   />
                 </motion.div>
@@ -155,41 +155,41 @@ export default function Home() {
                 </Link>
               </motion.div>
               <div className="flex justify-center">
-                <div className="flex flex-col gap-5 ">
+                <div className="flex flex-col gap-5 items-center">
                   <motion.div
-                    variants={fadeIn("right", 0.3)}
+                    variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.1 }}
                   >
                     <Image
-                      src="/Akabenezer.jpg"
+                      src="https://d2oe4z990jupbo.cloudfront.net/Akabenezer.jpg"
                       alt="community-image"
-                      className="rouned-lg "
+                      className="rouned-lg lg:w-[70vw]"
                     />
                   </motion.div>
                   <motion.div
-                    variants={fadeIn("right", 0.4)}
+                    variants={fadeIn("up", 0.4)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.1 }}
                   >
                     <Image
-                      src="/Inaki-williams.jpg"
+                      src="https://d2oe4z990jupbo.cloudfront.net/Inaki-williams.jpg"
                       alt="community-image"
-                      className="rouned-lg"
+                      className="rouned-lg lg:w-[70vw]"
                     />
                   </motion.div>
                   <motion.div
-                    variants={fadeIn("right", 0.5)}
+                    variants={fadeIn("up", 0.5)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.1 }}
                   >
                     <Image
-                      src="/satisfied-costumer-4.jpg"
+                      src="https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-4.jpg"
                       alt="community-image"
-                      className="rouned-lg "
+                      className="rouned-lg lg:w-[70vw]"
                     />
                   </motion.div>
                 </div>
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
         <section className="sm:px-5 lg:px-10 py-[50px] flex justify-center">
           <div className="flex flex-col gap-10 sm:text-center max-w-[90%]">
             <div className="flex flex-col gap-10">
@@ -219,8 +219,8 @@ export default function Home() {
                 <ProfileCard
                   name="Emmanuel"
                   title="Artist"
-                  coverImage="/Artist@work.jpg"
-                  displayImage="/smartist.JPG"
+                  coverImage="https://d2oe4z990jupbo.cloudfront.net/Artist@work.jpg"
+                  displayImage="https://d2oe4z990jupbo.cloudfront.net/smartist.JPG"
                 />
               </Link>
             </motion.div>
@@ -246,9 +246,13 @@ export default function Home() {
                   to your own vision
                 </p>
                 <Link to="/gallery">
-                  <button className="w-fit bg-primary-1 text-center p-3 rounded-xl text-white hover:bg-primary-2 flex items-center gap-2 hover:gap-3">
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-fit bg-primary-1 text-center p-3 rounded-xl text-white hover:bg-primary-2 flex items-center gap-2 hover:gap-3"
+                  >
                     Show More <FaArrowRight className="text-lg" />
-                  </button>
+                  </motion.button>
                 </Link>
               </div>
               <motion.div
@@ -264,7 +268,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="sm:px-5 sm:py-[100px] flex justify-center">
+        <section className="sm:px-5 sm:py-[50px] flex justify-center">
           <div className="flex flex-col gap-16 max-w-[90%]">
             <div className="gap-5 flex flex-col lg:text-center sm:text-start">
               <h3 className="text-4xl">Get in Touch</h3>
@@ -282,9 +286,13 @@ export default function Home() {
                   <h4 className="text-2xl">Get Assistance</h4>
                   <p>Get Assistance with your orders or any technical issues</p>
                   <Link to="/contact">
-                    <button className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center"
+                    >
                       Start a Conversation <FaArrowRight className="text-sm" />
-                    </button>
+                    </motion.button>
                   </Link>
                 </div>
               </div>
@@ -296,9 +304,13 @@ export default function Home() {
                   <h4 className="text-2xl">Get Assistance</h4>
                   <p>Get Assistance with your orders or any technical issues</p>
                   <Link to="/about#FAQsection">
-                    <button className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center"
+                    >
                       Get Support <FaArrowRight className="text-sm" />
-                    </button>
+                    </motion.button>
                   </Link>
                 </div>
               </div>
@@ -310,9 +322,13 @@ export default function Home() {
                   <h4 className="text-2xl">Collaborate</h4>
                   <p>Collaborate with us on artistic projects or events </p>
                   <Link to="/contact">
-                    <button className="text-md flex gap-2 bg-primary-1 hover:bg-primary-2 hover:gap-3 w-fit p-3 rounded-xl text-white items-center">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-2 hover:gap-3 w-fit p-3 rounded-xl text-white items-center"
+                    >
                       Contact Us <FaArrowRight className="text-sm" />
-                    </button>
+                    </motion.button>
                   </Link>
                 </div>
               </div>

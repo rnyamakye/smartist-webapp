@@ -25,6 +25,10 @@ export default function Footer() {
             <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <NavLink to="/contact">Contact Us</NavLink>
             </motion.li>
+
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <NavLink to="/community">Community</NavLink>
+            </motion.li>
           </ul>
         </div>
         <div className="flex justify-center gap-3">

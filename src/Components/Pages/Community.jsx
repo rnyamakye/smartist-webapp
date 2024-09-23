@@ -32,39 +32,25 @@ const Community = () => {
   }, []);
   const customers = [
     {
-      src: "/satisfied-costumer-2.jpg",
-      // description:
-      //   "A night scene showing a swirling night sky over a sleeping village.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-2.jpg",
     },
     {
-      src: "/satisfied-costumer-3.jpg",
-      // description:
-      //   "Surrealist painting featuring melting clocks in a desert landscape.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-3.jpg",
     },
     {
-      src: "/satisfied-costumer-5.jpg",
-      // description:
-      //   "A portrait of a girl wearing an exotic dress and a large pearl earring.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-5.jpg",
     },
     {
-      src: "/satisfied-costumer-6.WEBP",
-      // description:
-      //   "An expressionist painting depicting an agonized figure against a landscape.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-6.WEBP",
     },
     {
-      src: "/satisfied-costumer-4.jpg",
-      // description:
-      //   "A Renaissance masterpiece depicting the goddess Venus emerging from the sea.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-4.jpg",
     },
     {
-      src: "/Artist-holding-commissioned-portrait-1.JPG",
-      // description:
-      //   "A large 17th-century painting famous for its dramatic use of light and shadow.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/Artist-holding-commissioned-portrait-1.JPG",
     },
     {
-      src: "/satisfied-costumer-6.jpg",
-      // description:
-      //   "A large 17th-century painting famous for its dramatic use of light and shadow.",
+      src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-6.jpg",
     },
   ];
 
