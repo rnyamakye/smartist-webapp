@@ -29,6 +29,15 @@ footer {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0f0d",endColorstr="#2c101b",GradientType=1);
 }
+.more-images {
+  background: linear-gradient(
+    313deg,
+    rgba(14, 15, 13, 0.9) 15%,
+    rgba(41, 41, 53, 0.9) 50%,
+    rgba(44, 16, 27, 0.9) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0f0d",endColorstr="#2c101b",GradientType=1);
+}
 
 .navbar {
   background: linear-gradient(

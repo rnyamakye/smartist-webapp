@@ -1,49 +1,50 @@
 import { Carousel } from "@material-tailwind/react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Image from "./Image";
 
-export function CarouselDefault({ scale = 125, duration = 500 }) {
+export function CarouselDefault() {
   return (
-    <Carousel className="rounded-xl overflow-hidden bg-primary-1 lg:h-[700px] lg:w-[80%] text-black shadow-lg">
-      <img
+    <Carousel className="rounded-3xl overflow-hidden more-images lg:h-[600px] lg:w-[650px] text-black shadow-lg">
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-10.JPG"
         alt="image 1"
-        className={`object-cover w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover w-full lg:w-[670px] sm:h-full lg:h-[600px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-11.JPG"
         alt="image 2"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-13.JPG"
         alt="image 3"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-14.JPG"
         alt="image 2"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-16.JPG"
         alt="image 3"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-17.JPG"
         alt="image 2"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <img
+      <Image
         src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-19.JPG"
         alt="image 3"
-        className={`object-cover sm:w-full sm:h-full lg:h-[800px] transform transition duration-${duration} hover:scale-${scale}`}
+        className={`object-cover sm:w-full sm:h-full lg:h-[600px] lg:w-[670px] transform transition `}
       />
-      <div className="w-full sm:h-[300px] relative lg:w-full text-center flex  justify-center items-center ">
+      <div className="more-images w-full lg:h-full h-[full] relative lg:w-full text-center flex  justify-center items-center ">
         <Link
           to="/gallery"
-          className="text-white flex items-center gap-2 hover:gap-3 hover:bg-primary-2 absolute top-1/2 w-fit p-5 rounded-xl"
+          className="text-white translate-y-[200px] lg:translate-y-0 flex items-center gap-2 hover:scale-[1.2] absolute top-1/2 w-fit p-5 rounded-xl transition-all duration-300"
         >
           Show More <FaArrowRight className="text-lg" />
         </Link>

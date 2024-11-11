@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dialog, DialogBody, Card } from "@material-tailwind/react";
 
 const Image = ({ src, alt, name, description, title, className }) => {
@@ -17,7 +17,7 @@ const Image = ({ src, alt, name, description, title, className }) => {
         <img
           src={src}
           alt={alt}
-          className="object-cover sm:w-full  cursor-pointer"
+          className={`object-cover w-full cursor-zoom-in ${className}`}
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>

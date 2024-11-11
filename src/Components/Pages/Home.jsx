@@ -20,7 +20,7 @@ export default function Home() {
       <main className="relative sm:-top-[100px] lg:-top-[120px]">
         <header className="header-container sm:pt-[200px] sm:pb-[50px] lg:pt-[250px] sm:text-center text-white flex justify-center">
           <div className="flex sm:flex-col gap-14 lg:flex-row lg:items-start max-w-[85%]">
-            <div className="flex flex-col sm:gap-14 lg:gap-10 sm:justify-center sm:text-center lg:text-start lg:items-start sm:items-center">
+            <div className="flex flex-col sm:gap-14 lg:gap-10 sm:justify-center sm:text-center lg:text-start lg:items-start sm:items-center lg:w-[500px]">
               <motion.div
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
@@ -75,7 +75,7 @@ export default function Home() {
               <Image
                 src="https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-2.jpg"
                 alt="Header-src"
-                className="rounded-2xl lg:h-[600px] object-contain sm:w-full lg:w-[45vw]"
+                className="rounded-2xl lg:h-[500px] object-contain sm:w-full lg:w-[400px]"
               />
             </motion.div>
           </div>
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         <section className="sm:px-5 lg:px-10 py-[50px] flex justify-center">
           <div className="flex flex-col gap-10 sm:text-center max-w-[90%]">
             <div className="flex flex-col gap-10">
@@ -289,7 +289,7 @@ export default function Home() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center"
+                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 lg:w-fit w-[200px] justify-center p-3 rounded-xl text-white items-center"
                     >
                       Start a Conversation <FaArrowRight className="text-sm" />
                     </motion.button>
@@ -307,7 +307,7 @@ export default function Home() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 w-fit p-3 rounded-xl text-white items-center"
+                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
                     >
                       Get Support <FaArrowRight className="text-sm" />
                     </motion.button>
@@ -325,7 +325,7 @@ export default function Home() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-2 hover:gap-3 w-fit p-3 rounded-xl text-white items-center"
+                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-2 hover:gap-3 lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
                     >
                       Contact Us <FaArrowRight className="text-sm" />
                     </motion.button>
