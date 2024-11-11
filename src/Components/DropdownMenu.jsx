@@ -27,6 +27,17 @@ export default function DropdownMenu() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
+
   return (
     <div className="">
       <button className="dropdown-container bg-slate-800 p-2 rounded-full ">
@@ -41,9 +52,9 @@ export default function DropdownMenu() {
           style={{ display: isOpen ? "block" : "none" }}
         />
       </button>
-      <div className="z-50">
+      <div className="-z-50">
         <div
-          className={` dropdown-menu absolute mt-0 sm:w-full -right-[0%] justify-center bg-[#313225] sm:py-10 text-white text-center flex flex-col gap-5 my-4 rounded-2xl duration-700 ease-in-out ${
+          className={` dropdown-menu absolute mt-0 sm:w-full -right-[0%] justify-center sm:py-10 text-white text-center flex flex-col gap-5 my-4 rounded-b-2xl duration-700 ease-in-out ${
             isOpen ? "active" : "inactive"
           }`}
           ref={menuRef}
@@ -52,36 +63,42 @@ export default function DropdownMenu() {
             <NavLink
               to="/"
               className="sm:block px-4 py-2  md:hidden hover:text-primary-1"
+              onClick={closeDropdown}
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
               className="sm:block px-4 py-2 md:hidden hover:text-primary-1"
+              onClick={closeDropdown}
             >
               About
             </NavLink>
             <NavLink
               to="/gallery"
               className="sm:block px-4 py-2  hover:text-primary-1"
+              onClick={closeDropdown}
             >
               Gallery
             </NavLink>
             <NavLink
               to="/contact"
               className="sm:block px-4 py-2 hover:text-primary-1"
+              onClick={closeDropdown}
             >
               Contact
             </NavLink>
             <NavLink
               to="/community"
               className="sm:block px-4 py-2 hover:text-primary-1"
+              onClick={closeDropdown}
             >
               Community
             </NavLink>
             <NavLink
               to="/social-media"
               className="sm:block px-4 py-2 hover:text-primary-1"
+              onClick={closeDropdown}
             >
               Pages
             </NavLink>

@@ -1,4 +1,3 @@
-// src/NavLink.js
 
 import { useLocation, Link } from "react-router-dom";
 

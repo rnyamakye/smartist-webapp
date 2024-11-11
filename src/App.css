@@ -1,6 +1,9 @@
 body {
   background-color: rgb(229, 229, 229);
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 .header-container {
   background: linear-gradient(
@@ -27,16 +30,34 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0f0d",endColorstr="#2c101b",GradientType=1);
 }
 
+.navbar {
+  background: linear-gradient(
+    313deg,
+    rgba(14, 15, 13, 0.9) 15%,
+    rgba(41, 41, 53, 0.9) 50%,
+    rgba(44, 16, 27, 0.9) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0f0d",endColorstr="#2c101b",GradientType=1);
+}
+
 .dropdown-menu.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0px);
+  transform-origin: top;
+  z-index: 1;
   transition: 500ms ease;
+  background: linear-gradient(
+    313deg,
+    rgba(14, 15, 13, 0.9) 15%,
+    rgba(41, 41, 53, 0.9) 50%,
+    rgba(44, 16, 27, 0.9) 100%
+  );
 }
 .dropdown-menu.inactive {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
+  transform: translateY(-2px);
   transition: 500ms ease;
 }
 button {
