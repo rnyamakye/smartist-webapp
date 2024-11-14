@@ -50,11 +50,15 @@ const SocialMediaProfiles = () => {
     <>
       <main className="relative sm:-top-[100px]">
         <header className="header-container text-gray-200 relative sm:py-[200px]">
-          <div>
-            <h1 className="sm:text-4xl text-center">
+          <div className="mx-3">
+            <motion.h1 
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.1 }} className="sm:text-4xl text-center">
               {" "}
               Follow and Subscribe on all Social Media Platforms
-            </h1>
+            </motion.h1>
           </div>
         </header>
         <div className="max-w-7xl sm:px-5 md:p-6 lg:px-10 py-[100px] flex flex-col sm:gap-[50px]">

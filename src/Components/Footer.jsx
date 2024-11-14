@@ -37,16 +37,10 @@ export default function Footer() {
             whileTap={{ scale: 0.9 }}
             className="hover:bg-blue-gray-700 w-fit p-3 rounded-full"
           >
-            <Link>
-              <BsTwitterX />
-            </Link>
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:bg-blue-gray-700 w-fit p-3 rounded-full"
-          >
-            <Link>
+            <Link
+              to={"https://web.facebook.com/profile.php?id=100040140157602"}
+              target=""
+            >
               <FaFacebookF />
             </Link>
           </motion.div>
@@ -55,7 +49,12 @@ export default function Footer() {
             whileTap={{ scale: 0.9 }}
             className="hover:bg-blue-gray-700 w-fit p-3 rounded-full"
           >
-            <Link>
+            <Link
+              to={
+                "https://www.instagram.com/an_mmanuel?igsh=MXViNWhzajhldTczYg%3D%3D&utm_source=qr"
+              }
+              target=""
+            >
               <FaInstagram />
             </Link>
           </motion.div>
@@ -64,7 +63,7 @@ export default function Footer() {
             whileTap={{ scale: 0.9 }}
             className="hover:bg-blue-gray-700 w-fit p-3 rounded-full"
           >
-            <Link>
+            <Link to={"https://wa.me/+233547348350"} target="">
               <IoLogoWhatsapp />
             </Link>
           </motion.div>
@@ -73,13 +72,18 @@ export default function Footer() {
             whileTap={{ scale: 0.9 }}
             className="hover:bg-blue-gray-700 w-fit p-3 rounded-full"
           >
-            <Link>
+            <Link
+              to={
+                "https://www.tiktok.com/@smartist88?_r=1&_d=ec6j37b833e18m&sec_uid=MS4wLjABAAAArHLqVNvZZwKxiGjQplwGkpVPyfkja2bA2MjQrV_-bcwY7L4ecW03xR1-XfYgz8Bl&share_author_id=6845061668210066437&sharer_language=en&source=h5_m&u_code=dd81j943ci6j5h&ug_btm=b0,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAArHLqVNvZZwKxiGjQplwGkpVPyfkja2bA2MjQrV_-bcwY7L4ecW03xR1-XfYgz8Bl&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=6845061668210066437&share_link_id=E9FEC259-B32C-461F-AEF1-E3B4F82CEC54&share_app_id=1233"
+              }
+              target=""
+            >
               <FaTiktok />
             </Link>
           </motion.div>
         </div>
         <div className="border-t-gray-600 border-t text-center">
-          <p className="py-[50px]">
+          <p className="py-[50px] text-[12px] text-white/70">
             © 2024 Smartist Pencil Art. All rights Reserved
           </p>
         </div>

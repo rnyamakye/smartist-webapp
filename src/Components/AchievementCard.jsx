@@ -9,14 +9,14 @@ const AchievementCard = ({ icon, count, description, href }) => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.1 }}
-      className={`border-gray-400 border-[1px] sm:w-full sm:h-[250px] rounded-2xl $ flex flex-col justify-between`}
+      className={`border-gray-400 bg-white/50 border-[1px] sm:w-full sm:h-[250px] rounded-2xl $ flex flex-col justify-between items-start`}
     >
       {icon && <div className="text-3xl m-5">{icon}</div>}
-      <div className="p-5">
+      <div className="p-5 flex-col flex items-start">
         <h4 className="text-5xl">
           <Link to={href}>{count}</Link>
         </h4>
-        {description}
+        <p className="">{description}</p>
       </div>
     </motion.div>
   );

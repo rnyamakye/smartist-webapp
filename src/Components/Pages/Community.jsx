@@ -52,6 +52,12 @@ const Community = () => {
     {
       src: "https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-6.jpg",
     },
+    {
+      src: "https://d2oe4z990jupbo.cloudfront.net/Akabenezer.jpg",
+    },
+    {
+      src: "https://d2oe4z990jupbo.cloudfront.net/Inaki-williams.jpg",
+    },
   ];
 
   return (
@@ -68,15 +74,7 @@ const Community = () => {
               >
                 Customer Satisfaction is Our Top Priority
               </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-xl text-gray-300"
-              >
-                We prioritize your satisfaction by delivering exceptional
-                service.
-              </motion.p>
+              
               <motion.p
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}

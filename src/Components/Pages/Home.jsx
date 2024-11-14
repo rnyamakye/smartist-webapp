@@ -12,15 +12,15 @@ import ImageZ from "../ImageZ";
 import Image from "../Image";
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <>
       <main className="relative sm:-top-[100px] lg:-top-[120px]">
         <header className="header-container sm:pt-[200px] sm:pb-[50px] lg:pt-[250px] sm:text-center text-white flex justify-center">
-          <div className="flex sm:flex-col gap-14 lg:flex-row lg:items-start max-w-[85%]">
-            <div className="flex flex-col sm:gap-14 lg:gap-10 sm:justify-center sm:text-center lg:text-start lg:items-start sm:items-center lg:w-[500px]">
+          <div className="flex sm:flex-col md:flex-row gap-14 lg:flex-row lg:items-start w-[85%]">
+            <div className="flex flex-col sm:gap-14 lg:gap-10 sm:justify-center sm:text-center md:text-start lg:text-start lg:items-start sm:items-center lg:w-[500px]">
               <motion.div
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
@@ -36,16 +36,16 @@ export default function Home() {
                   art.
                 </p>
               </motion.div>
-              <div className=" flex gap-5 sm:flex-col lg:flex-row  sm:justify-center ">
+              <div className=" flex gap-5 sm:flex-col lg:flex-row  sm:justify-center md:justify-start md:items-start md:flex-row  ">
                 <Link to="/gallery">
                   <motion.button
                     variants={fadeIn("up", 0.5)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.1 }}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.9 }}
-                    className="rounded-lg bg-slate-700 w-fit p-3 text-white hover:bg-transparent bg-primary-1 text-lg"
+                    className="rounded-lg bg-slate-700 w-fit p-3 md:p-1 text-white hover:bg-transparent bg-primary-1 text-lg md:text-[12px]"
                   >
                     Explore Our Gallery
                   </motion.button>
@@ -56,9 +56,9 @@ export default function Home() {
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.1 }}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-fit p-3 flex items-center gap-2 text-lg hover:bg-[#313225] hover:gap-3 rounded-lg "
+                    className="w-fit p-3 flex items-center gap-2 text-lg   rounded-lg md:text-[12px]"
                   >
                     Meet Our Artists <FaArrowRight className="text-lg" />
                   </motion.button>
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </header>
         <section className="sm:text-center sm:py-[50px] lg:py-[100px] flex justify-center">
-          <div className="gap-20 flex sm:flex-col max-w-[85%]">
+          <div className="gap-20 flex sm:flex-col max-w-[90%] md:max-w-[99vw]">
             <div className="px-5 flex sm:flex-col gap-10">
               <motion.div
                 variants={fadeIn("up", 0.3)}
@@ -102,7 +102,7 @@ export default function Home() {
                 >
                   <ImageZ
                     src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-19.JPG"
-                    description="Portait"
+                    description="Portrait"
                   />
                 </motion.div>
                 <motion.div
@@ -124,8 +124,9 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <ImageZ
-                    src="https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-17.JPG"
-                    description="Animal Portait"
+                    src="https://d2oe4z990jupbo.cloudfront.net/family-portrait.JPG"
+                    description="Family Portraits"
+                    className={"h-[380px]"}
                   />
                 </motion.div>
               </div>
@@ -138,17 +139,18 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 className="sm:px-4 flex flex-col gap-10 text-center items-center"
               >
-                <h2 className="text-4xl ">Join Our Satisfied Customers</h2>
-                <p className="text-gray-600">
-                  Customer Satisfaction is Our Utmost Priority. <br /> Check Out
-                  Our Satisfied Customers. <br /> Join Our Community of
-                  Satisfied Customers.
+                <h2 className="text-4xl ">
+                  Customer Satisfaction is Our Priority
+                </h2>
+                <p className="text-black/60">
+                  At Manuel Art Center We are a Community. Join Us Now and
+                  Commission your Own Art Piece at An Affordable Price
                 </p>
                 <Link to="/community">
                   <motion.button
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-fit bg-primary-1 text-center p-3 rounded-xl  hover:bg-primary-2 text-white"
+                    className="w-fit bg-primary-1 text-center p-3 rounded-xl  hover:bg-primary-1/80 text-white"
                   >
                     Join The Community
                   </motion.button>
@@ -165,7 +167,7 @@ export default function Home() {
                     <Image
                       src="https://d2oe4z990jupbo.cloudfront.net/Akabenezer.jpg"
                       alt="community-image"
-                      className="rouned-lg lg:w-[70vw]"
+                      className="rounded-lg lg:w-[70vw] md:w-[70vw]"
                     />
                   </motion.div>
                   <motion.div
@@ -177,7 +179,7 @@ export default function Home() {
                     <Image
                       src="https://d2oe4z990jupbo.cloudfront.net/Inaki-williams.jpg"
                       alt="community-image"
-                      className="rouned-lg lg:w-[70vw]"
+                      className="rounded-lg lg:w-[70vw] md:w-[70vw]"
                     />
                   </motion.div>
                   <motion.div
@@ -189,7 +191,7 @@ export default function Home() {
                     <Image
                       src="https://d2oe4z990jupbo.cloudfront.net/satisfied-costumer-4.jpg"
                       alt="community-image"
-                      className="rouned-lg lg:w-[70vw]"
+                      className="rounded-lg lg:w-[70vw] md:w-[70vw]"
                     />
                   </motion.div>
                 </div>
@@ -202,7 +204,7 @@ export default function Home() {
           <div className="flex flex-col gap-10 sm:text-center max-w-[90%]">
             <div className="flex flex-col gap-10">
               <h3 className="text-4xl ">Meet Our Talented Artist</h3>
-              <p className="text-gray-500 text-lg">
+              <p className="text-black/60 text-lg">
                 Get to know the creative mind behind our stunning pencil
                 artworks
               </p>
@@ -213,14 +215,12 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.1 }}
-              className="sm:px-5"
+              className="flex justify-center"
             >
-              <Link to="/social-media">
-                <ProfileCard
-                  name="Emmanuel"
-                  title="Artist"
-                  coverImage="https://d2oe4z990jupbo.cloudfront.net/Artist@work.jpg"
-                  displayImage="https://d2oe4z990jupbo.cloudfront.net/smartist.JPG"
+              <Link to="/about">
+                <Image
+                  src={"https://d2oe4z990jupbo.cloudfront.net/smartist.JPG"}
+                  className={"md:w-[60vw]"}
                 />
               </Link>
             </motion.div>
@@ -228,7 +228,7 @@ export default function Home() {
         </section>
 
         <section className=" py-[50px] flex justify-center">
-          <div className="max-w-[90%]">
+          <div className="max-w-[90%] md:max-w-[80vw]">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -238,18 +238,15 @@ export default function Home() {
             >
               <div className="flex flex-col gap-10 text-center items-center ">
                 <h3 className="text-4xl">Own a Masterpiece</h3>
-                <h4>
-                  Don't miss the chance to own a piece of exquisite pencil art.
-                </h4>
                 <p>
                   Explore our collection or commission a custom piece tailored
                   to your own vision
                 </p>
                 <Link to="/gallery">
                   <motion.button
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-fit bg-primary-1 text-center p-3 rounded-xl text-white hover:bg-primary-2 flex items-center gap-2 hover:gap-3"
+                    className="w-fit bg-primary-1 text-center p-3 rounded-xl text-white hover:bg-primary-1/80 flex items-center gap-2 "
                   >
                     Show More <FaArrowRight className="text-lg" />
                   </motion.button>
@@ -272,7 +269,7 @@ export default function Home() {
           <div className="flex flex-col gap-16 max-w-[90%]">
             <div className="gap-5 flex flex-col lg:text-center sm:text-start">
               <h3 className="text-4xl">Get in Touch</h3>
-              <p>
+              <p className="text-black/60">
                 Reach out to us for inquiries, custom artwork, or any other
                 questions.
               </p>
@@ -284,12 +281,14 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col lg:text-center sm:items-start lg:items-center gap-5">
                   <h4 className="text-2xl">Get Assistance</h4>
-                  <p>Get Assistance with your orders or any technical issues</p>
+                  <p className="text-black/60">
+                    Get Assistance with your orders or any technical issues
+                  </p>
                   <Link to="/contact">
                     <motion.button
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 lg:w-fit w-[200px] justify-center p-3 rounded-xl text-white items-center"
+                      className="text-md flex gap-2  bg-primary-1 hover:bg-primary-1/80 lg:w-fit w-[200px] justify-center p-3 rounded-xl text-white items-center"
                     >
                       Start a Conversation <FaArrowRight className="text-sm" />
                     </motion.button>
@@ -302,12 +301,14 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col lg:text-center sm:items-start lg:items-center gap-5">
                   <h4 className="text-2xl">Get Assistance</h4>
-                  <p>Get Assistance with your orders or any technical issues</p>
+                  <p className="text-black/60">
+                    Get Assistance with your orders or any technical issues
+                  </p>
                   <Link to="/about#FAQsection">
                     <motion.button
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 hover:gap-3 bg-primary-1 hover:bg-primary-2 lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
+                      className="text-md flex gap-2  bg-primary-1 hover:bg-primary-1/80 lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
                     >
                       Get Support <FaArrowRight className="text-sm" />
                     </motion.button>
@@ -320,12 +321,14 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col lg:text-center lg:items-center sm:items-start gap-5">
                   <h4 className="text-2xl">Collaborate</h4>
-                  <p>Collaborate with us on artistic projects or events </p>
+                  <p className="text-black/60">
+                    Collaborate with us on artistic projects or events{" "}
+                  </p>
                   <Link to="/contact">
                     <motion.button
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-2 hover:gap-3 lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
+                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-1/80  lg:w-fit p-3 rounded-xl text-white items-center w-[200px] justify-center"
                     >
                       Contact Us <FaArrowRight className="text-sm" />
                     </motion.button>

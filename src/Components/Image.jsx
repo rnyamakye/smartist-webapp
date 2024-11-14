@@ -8,7 +8,7 @@ const Image = ({ src, alt, name, description, title, className }) => {
 
   return (
     <div
-      className={`relative overflow-hidden flex sm:flex-col lg:flex-row gap-5 border-none rounded-3xl ${className}`}
+      className={`relative overflow-hidden flex sm:flex-col lg:flex-row gap-5 border-none rounded-xl ${className}`}
     >
       <Card
         className="w-full cursor-pointer overflow-hidden transition-opacity hover:opacity-90"

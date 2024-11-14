@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav
       className="navbar relative 
-     top-5 left-0 p-1 lg:py-1 w-[90%] opacity-95 sm:px-5 rounded-2xl shadow-md z-[100]"
+     top-5 left-0 p-1 lg:py-1 w-[90%] sm:px-5 rounded-2xl shadow-md z-[100]"
     >
       <div className="">
         <div className=" flex flex-row border-gray-900 rounded-full py-2 items-center lg:text-2xl sm:text-2xl  md:text-2xl  justify-between">

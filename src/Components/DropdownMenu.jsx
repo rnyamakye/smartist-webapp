@@ -54,53 +54,46 @@ export default function DropdownMenu() {
       </button>
       <div className="-z-50">
         <div
-          className={` dropdown-menu absolute mt-0 sm:w-full -right-[0%] justify-center sm:py-10 text-white text-center flex flex-col gap-5 my-4 rounded-b-2xl duration-700 ease-in-out ${
+          className={` dropdown-menu absolute mt-3 sm:w-full -right-[0%] justify-center sm:py-10 text-white text-center flex flex-col gap-5 my-4 rounded-2xl duration-700 ease-in-out ${
             isOpen ? "active" : "inactive"
           }`}
           ref={menuRef}
         >
-          <div className="relative font-semibold grid grid-cols-2 gap-3 text-white ">
+          <div className="relative font-semibold md:flex-col md:flex grid grid-cols-2 gap-3 text-white ">
             <NavLink
               to="/"
-              className="sm:block px-4 py-2  md:hidden hover:text-primary-1"
+              className="sm:block px-4 py-2  md:hidden hover:text-white/50"
               onClick={closeDropdown}
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="sm:block px-4 py-2 md:hidden hover:text-primary-1"
+              className="sm:block px-4 py-2 md:hidden hover:text-white/50"
               onClick={closeDropdown}
             >
               About
             </NavLink>
             <NavLink
               to="/gallery"
-              className="sm:block px-4 py-2  hover:text-primary-1"
+              className="sm:block px-4 py-2  hover:text-white/50"
               onClick={closeDropdown}
             >
               Gallery
             </NavLink>
             <NavLink
               to="/contact"
-              className="sm:block px-4 py-2 hover:text-primary-1"
+              className="sm:block px-4 py-2 hover:text-white/50 md:hidden"
               onClick={closeDropdown}
             >
               Contact
             </NavLink>
             <NavLink
               to="/community"
-              className="sm:block px-4 py-2 hover:text-primary-1"
+              className="sm:block px-4 py-2 hover:text-white/50"
               onClick={closeDropdown}
             >
               Community
-            </NavLink>
-            <NavLink
-              to="/social-media"
-              className="sm:block px-4 py-2 hover:text-primary-1"
-              onClick={closeDropdown}
-            >
-              Pages
             </NavLink>
           </div>
         </div>

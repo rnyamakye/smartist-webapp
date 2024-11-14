@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
@@ -15,7 +15,7 @@ const Artworks = ({ title, src }) => {
       className="mb-8"
     >
       <div className="bg-white rounded-lg shadow-lg overflow-hidden relative">
-        <ImageZ src={src} className="w-full h-full sm:h-64 object-cover" />
+        <ImageZ src={src} className="w-full h-full sm:h-[350px] object-cover" />
         <div className=" absolute bottom-2 ">
           <h2 className="text-xl sm:text-2xl text-white font-medium mb-2">
             {title}
@@ -47,7 +47,7 @@ const Gallery = () => {
       //   "A portrait of a girl wearing an exotic dress and a large pearl earring.",
     },
     {
-      src: "https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-11.JPG",
+      src: "https://d2oe4z990jupbo.cloudfront.net/commmissioned-portrait-12.JPG",
       // description:
       //   "An expressionist painting depicting an agonized figure against a landscape.",
     },
@@ -250,9 +250,9 @@ const Gallery = () => {
                 className="flex items-center gap-5 text-center justify-center text-xl text-black"
               >
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.9 }}
-                  className="flex items-center gap-3"
+                  className="flex text-[15px] font-semibold text-black/60 items-center gap-3"
                 >
                   Grab Your Own Custom Artwork{" "}
                   <FaArrowRight className="text-lg" />

@@ -12,12 +12,21 @@ const FAQ = ({ question, answer }) => {
       >
         <span className="text-lg font-medium">{question}</span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-gray-500" />
+          <ChevronUp className="h-5 w-5 text-gray-500 transition-all duration-300 ease" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-gray-500" />
+          <ChevronDown className="h-5 w-5 text-gray-500 transition-all duration-300 ease" />
         )}
       </button>
-      {isOpen && <div className="mt-2 text-gray-600">{answer}</div>}
+      <div
+        className={`mt-2 text-[15px] text-black/60 transition-all duration-500 ease ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+        style={{
+          overflow: "hidden",
+        }}
+      >
+        {answer}
+      </div>
     </div>
   );
 };
@@ -25,34 +34,34 @@ const FAQ = ({ question, answer }) => {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What types of pencils are best for beginners?",
+      question: "How do I get in touch with you to commission a portrait?",
       answer:
-        "For beginners, we recommend starting with a set of graphite pencils ranging from 2H to 6B. This gives you a good range of hardness and softness to experiment with different shading techniques.",
+        "You can reach me through various social media platforms, contact my business number listed on the contact page, or send an email using the form provided on the contact page.",
     },
     {
-      question: "How do I prevent smudging in my pencil drawings?",
+      question: "How long does it take for me to get my commissioned art piece",
       answer:
-        "To prevent smudging, you can use a piece of paper under your hand while drawing, spray your finished work with a fixative, or use harder pencils (H range) which are less prone to smudging.",
+        "",
     },
     {
-      question: "What paper is best for pencil art?",
+      question: "How do I get the portrait once you're done making it?",
       answer:
-        "The best paper for pencil art depends on your style, but generally, a medium texture paper works well. For detailed work, try smooth bristol board, and for more textured drawings, consider cold-pressed watercolor paper.",
+        "",
     },
     {
-      question: "How often should I sharpen my pencils?",
+      question: "Do you do delivery?",
       answer:
-        "It's best to keep your pencils sharp for precise lines and details. Sharpen them whenever the point becomes dull. Some artists prefer to rotate the pencil as they draw to maintain a sharp edge longer.",
+        "",
     },
     {
-      question: "Can I erase pencil marks completely?",
+      question: "Do you teach this craft to people who are willing to learn?",
       answer:
-        "Most pencil marks can be erased, especially if you're using a good quality eraser. Kneaded erasers are great for lifting graphite without damaging the paper. However, very dark or heavily layered areas might leave some residue.",
+        "",
     },
     {
-      question: "How do I achieve different textures in my pencil drawings?",
+      question: "Which days are you open for business",
       answer:
-        "You can achieve different textures by varying your pressure, using different pencil grades, and employing techniques like hatching, cross-hatching, stippling, and blending. Experimenting with different paper textures can also add interesting effects.",
+        "",
     },
   ];
 

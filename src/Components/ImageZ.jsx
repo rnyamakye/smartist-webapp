@@ -17,14 +17,14 @@ const ImageZ = ({ src, alt, name, description, className }) => {
         <img
           src={src}
           alt={alt}
-          className={`object-cover w-full h-[100%] transform transition duration-500 hover:scale-125`}
+          className={`object-cover w-full h-[100%] md:h-full transform transition duration-500 hover:scale-[1.05] cursor-zoom-in`}
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>
         <DialogBody>
           <img
             alt={alt}
-            className="h-full w-fullrounded-lg object-cover object-center"
+            className="h-[80vh] w-full rounded-lg object-cover object-center"
             src={src}
           />
         </DialogBody>
