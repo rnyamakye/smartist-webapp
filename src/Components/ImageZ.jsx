@@ -18,14 +18,23 @@ const ImageZ = ({ src, alt, name, description, className }) => {
           src={src}
           alt={alt}
           className={`object-cover w-full h-[100%] md:h-full transform transition duration-500 hover:scale-[1.05] cursor-zoom-in`}
+          loading="slow"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+            e.curentTarget.enerror = null;
+          }}
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>
-        <DialogBody>
+        <DialogBody className="">
           <img
             alt={alt}
-            className="h-[80vh] w-full rounded-lg object-cover object-center"
+            className="h-[70vh] md:h-[90vh] w-full rounded-lg object-cover object-center"
             src={src}
+            // onError={(e) => {
+            //   e.currentTarget.style.display = "none";
+            //   e.curentTarget.enerror = null;
+            // }}
           />
         </DialogBody>
       </Dialog>

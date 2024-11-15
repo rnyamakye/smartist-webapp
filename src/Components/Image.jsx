@@ -18,14 +18,23 @@ const Image = ({ src, alt, name, description, title, className }) => {
           src={src}
           alt={alt}
           className={`object-cover w-full cursor-zoom-in ${className}`}
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+            e.curentTarget.enerror = null;
+          }}
         />
       </Card>
       <Dialog size="" open={open} handler={handleOpen}>
         <DialogBody>
           <img
             alt={alt}
-            className="h-full w-full rounded-lg object-cover object-center"
+            className="h-[70vh] md:h-[85vh] w-full rounded-lg object-cover object-center"
+            loading="lazy"
             src={src}
+            // onError={(e) => {
+            //   e.currentTarget.style.display = "none";
+            //   e.curentTarget.enerror = null;
+            // }}
           />
         </DialogBody>
       </Dialog>

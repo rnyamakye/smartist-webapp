@@ -9,7 +9,7 @@ const AchievementCard = ({ icon, count, description, href }) => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.1 }}
-      className={`border-gray-400 bg-white/50 border-[1px] sm:w-full sm:h-[250px] rounded-2xl $ flex flex-col justify-between items-start`}
+      className={`border-gray-400 bg-white/50 border-[1px] sm:w-[150px] sm:h-[180px] rounded-2xl $ flex flex-col  justify-between items-start`}
     >
       {icon && <div className="text-3xl m-5">{icon}</div>}
       <div className="p-5 flex-col flex items-start">

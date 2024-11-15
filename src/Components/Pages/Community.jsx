@@ -11,7 +11,7 @@ const CustomerImages = ({ title, src }) => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView={"show"}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="mb-8"
     >
       <div className="bg-white rounded-lg shadow-lg overflow-hidden relative">
@@ -70,11 +70,11 @@ const Community = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl sm:text-5xl font-bold mb-8 text-center leading-loose text-white"
+                className="text-3xl sm:text-4xl font-semibold md:font-bold mb-8 text-center leading-loose text-white"
               >
                 Customer Satisfaction is Our Top Priority
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -85,20 +85,34 @@ const Community = () => {
               </motion.p>
             </div>
           </header>
-          <section className="py-[100px] lg:px-10 sm:px-5">
+          <motion.img
+            // initial={{ opacity: 0, y: 50 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5 }}
+            src="/PngItem_686205.png"
+            className="sticky h-[500px] top-10 w-[500px] right-[200px] opacity-30 -z-[20]"
+          />
+          <section
+            className="pb-[100px] relative -top-[300px] lg:px-10 
+          sm:px-5"
+          >
             <div className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 sm:px-5">
               {customers.map((artwork, index) => (
                 <CustomerImages key={index} {...artwork} />
               ))}
             </div>
           </section>
-          <section className="text-center">
+          <section className="text-center relative lg:pb-[50px] md:-top-[250px] -top-[200px]">
+            <img
+              src="/—Pngtree—stylish ripped torn paper texture_8797803.png"
+              className="absolute -top-[400px] -z-10 size-[900px] object-cover lg:right-[180px]"
+            />
             <motion.h1
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.1 }}
-              className="text-3xl sm:text-5xl font-bold mb-8 text-center text-black"
+              className="text-3xl sm:text-5xl font-semibold md:font-bold mb-8 text-center text-black"
             >
               What are you waiting for
             </motion.h1>

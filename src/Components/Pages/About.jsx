@@ -11,12 +11,7 @@ import ImageZ from "../ImageZ";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
 import FAQSection from "../FAQSection";
-import { FaMessage } from "react-icons/fa6";
-import { FaBug } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-import { RiComputerFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+
 
 export default function About() {
   useEffect(() => {
@@ -57,7 +52,8 @@ export default function About() {
           </div>
         </header>
         <section className="sm:px-5 lg:px-10 sm:py-[50px] lg:pt-[50px] relative flex justify-center">
-          <div className="about-hero-container sm:flex-col grid sm:gap-16 max-w-[90%] lg:gap-5">
+          <img src="/PngItem_726792.png" className="absolute opacity-30" />
+          <div className="about-hero-container sm:flex-col grid sm:gap-16 max-w-[90%] lg:gap-5 z-10">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -81,9 +77,12 @@ export default function About() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.1 }}
-              className="container-2 lg:w-[45vw] md:h-[500px] sm:w-full "
+              className="container-2 lg:w-[45vw] md:h-[500px] lg:h-full sm:w-full "
             >
-              <ImageZ src="https://d2oe4z990jupbo.cloudfront.net/Artist@work.jpg" className={'h-full'}/>
+              <ImageZ
+                src="https://d2oe4z990jupbo.cloudfront.net/Artist@work.jpg"
+                className={"h-full"}
+              />
             </motion.div>
 
             <div className="container-3 flex-col flex gap-20">
@@ -166,7 +165,11 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="sm:px-5 flex flex-col items-center sm:py-[50px] lg:-mt-[150px] lg:pb-[100px]">
+        <section className="sm:px-5 flex flex-col items-center sm:py-[50px] lg:-mt-[150px] lg:pb-[100px] relative">
+          <img
+            src="/PngItem_296322.png"
+            className="absolute top-[200px] opacity-50 h-[500px]"
+          />
           <div className="flex flex-col sm:gap-10 lg:gap-20 lg:max-w-[90%]">
             <motion.div
               variants={fadeIn("up", 0.5)}
@@ -182,7 +185,7 @@ export default function About() {
                 Explore a curated collection of stunning pencil sketches.
               </p>
             </motion.div>
-            <div className="grid gap-4 md:grid-cols-2 sm:grid-cols-1">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1">
               <motion.div
                 variants={fadeIn("right", 0.5)}
                 initial="hidden"
@@ -222,8 +225,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="sm:px-5 lg:px-10 sm:p-[50px]">
-          <div className="flex flex-col gap-20 lg:px-20">
+        <section className="sm:px-3 lg:px-10 sm:p-[50px]relative">
+          <div className="flex flex-col gap-20 lg:px-20 relative">
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
@@ -231,14 +234,15 @@ export default function About() {
               viewport={{ once: true, amount: 0.1 }}
               className="flex flex-col gap-5 text-center"
             >
-              <h4 className="sm:text-4xl lg:text-5xl lg:font-bold">
+              <h4 className="sm:text-4xl font-semibold lg:text-5xl lg:font-bold">
                 Achievements
               </h4>
               <p className="lg:text-lg text-black/60">
                 Impressive milestones in the artist's career.
               </p>
             </motion.div>
-            <div className="grid sm:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-3 md:gap-3 md:grid-rows-1 sm:grid-cols-1 gap-10 ">
+
+            <div className="grid sm:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-3 md:gap-3 md:grid-rows-1 sm:flex-row sm:flex sm:gap-2 lg::gap-10 z-10">
               <AchievementCard
                 icon={<FaAward />}
                 count="50+"
@@ -258,118 +262,26 @@ export default function About() {
             </div>
           </div>
         </section>
-        {/* <section className="sm:px-5 lg:px-10 sm:py-[50px]">
-          <div className="flex sm:flex-col lg:flex-row justify-between items-center gap-10">
-            <motion.div
-              variants={fadeIn("right", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.1 }}
-              className="flex flex-col gap-5"
-            >
-              <h3 className="sm:text-5xl leading-snug">Watch the Process</h3>
-              <p className="font-light">
-                See our artist in action, from sketching to final touches.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={fadeIn("left", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.1 }}
-            >
-              <iframe
-                className="sm:w-full sm:h-[200px] md:w-[60vw] md:h-[40vw] rounded-xl border-none lg:w-[40vw] lg:h-[300px] "
-                src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                title="YouTube video"
-                allowFullScreen
-              ></iframe>
-            </motion.div>
-          </div>
-        </section> */}
-        <section id="FAQSection" className="sm:px-5 sm:py-[50px]">
+
+        <section id="FAQSection" className="sm:px-5 sm:py-[50px] relative">
+          <img
+            src="/—Pngtree—stylish ripped torn paper texture_8797803.png"
+            className="absolute object-cover h-[700px] w-[95%] -z-10 lg:left-0 top-[50px] hidden md:block"
+          />
+          <img
+            src="/PngItem_686205.png"
+            className="absolute bottom-0 -left-10 md:hidden opacity-30 h-[800px] -z-10"
+          />
           <motion.div
             variants={fadeIn("up", 0.5)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.1 }}
             id="FAQsection"
+            className="z-10"
           >
             <FAQSection />
           </motion.div>
-        </section>
-        <section className="sm:px-5 sm:py-[50px] flex justify-center">
-          <div className="flex flex-col gap-16 max-w-[90%]">
-            <div className="gap-5 flex flex-col lg:text-center sm:text-start">
-              <h3 className="text-4xl">Get in Touch</h3>
-              <p className="text-black/60">
-                Reach out to us for inquiries, custom artwork, or any other
-                questions.
-              </p>
-            </div>
-            <div className="flex sm:flex-col md:gap-16 lg:flex-row gap-10 lg:items-center lg:justify-center">
-              <div className="sm:flex-row flex lg:flex-col gap-5 lg:items-center lg:justify-center relative">
-                <div className="relative top-2 bg-primary-1 w-fit h-fit p-4 rounded-lg text-white">
-                  <FaMessage />
-                </div>
-                <div className="flex flex-col lg:text-center sm:items-start lg:items-center gap-5">
-                  <h4 className="text-2xl">Get Assistance</h4>
-                  <p className="text-black/60">
-                    Get Assistance with your orders or any technical issues
-                  </p>
-                  <Link to="/contact">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2  bg-primary-1 hover:bg-primary-1/80 w-[200px] justify-center p-3 rounded-xl text-white items-center"
-                    >
-                      Start a Conversation <FaArrowRight className="text-sm" />
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
-              <div className="sm:flex-row flex lg:flex-col gap-5 lg:items-center lg:justify-center relative">
-                <div className="relative top-2 bg-primary-1 w-fit h-fit p-4 rounded-lg text-white">
-                  <FaBug />
-                </div>
-                <div className="flex flex-col lg:text-center sm:items-start lg:items-center gap-5">
-                  <h4 className="text-2xl">Get Support</h4>
-                  <p className="text-black/60">
-                    Get Assistance with your orders or any technical issues
-                  </p>
-                  <HashLink to="/about#FAQSection">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2  bg-primary-1 hover:bg-primary-1/80  p-3 rounded-xl text-white items-center w-[200px] justify-center"
-                    >
-                      Get Support <FaArrowRight className="text-sm" />
-                    </motion.button>
-                  </HashLink>
-                </div>
-              </div>
-              <div className="sm:flex-row flex lg:flex-col gap-5 lg:items-center lg:justify-center relative">
-                <div className="relative top-2 bg-primary-1 w-fit h-fit p-4 rounded-lg text-white">
-                  <RiComputerFill />
-                </div>
-                <div className="flex flex-col lg:text-center lg:items-center sm:items-start gap-5">
-                  <h4 className="text-2xl">Collaborate</h4>
-                  <p className="text-black/60">
-                    Collaborate with us on artistic projects or events{" "}
-                  </p>
-                  <Link to="/contact">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-md flex gap-2 bg-primary-1 hover:bg-primary-1/80 p-3 rounded-xl text-white items-center w-[200px] justify-center"
-                    >
-                      Contact Us <FaArrowRight className="text-sm" />
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
       </main>
     </>

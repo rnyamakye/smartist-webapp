@@ -7,7 +7,7 @@ module.exports = withMT({
       xs: "100px",
       sm: "200px",
       md: "548px",
-      lg: "1080px",
+      lg: "920px",
     },
     colors: {
       "primary-1": "#75716c",

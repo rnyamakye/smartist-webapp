@@ -11,7 +11,7 @@ const Artworks = ({ title, src }) => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView={"show"}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="mb-8"
     >
       <div className="bg-white rounded-lg shadow-lg overflow-hidden relative">
@@ -217,20 +217,32 @@ const Gallery = () => {
               </motion.p>
             </div>
           </header>
-          <section className="py-[100px] lg:px-10 sm:px-5">
+          <motion.img
+            // initial={{ opacity: 0, y: 50 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5 }}
+            src="/PngItem_686205.png"
+            className="sticky h-[500px] top-10 w-[500px] opacity-30 right- -z-[20]"
+          />
+
+          <section className=" lg:px-10 sm:px-5 relative -top-[300px]">
             <div className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 sm:px-5">
               {artworks.map((artwork, index) => (
                 <Artworks key={index} {...artwork} />
               ))}
             </div>
           </section>
-          <section className="text-center">
+          <section className="text-center relative pb-[100px] -top-[50px]">
+            <img
+              src="/—Pngtree—stylish ripped torn paper texture_8797803.png"
+              className="absolute md:-top-[500px] object-cover -top-[180px] -z-10 md:size-[1000px] w-[100vw] h-[500px] md:right-[130px]"
+            />
             <motion.h1
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.1 }}
-              className="text-3xl sm:text-5xl font-bold mb-8 text-center text-black"
+              className="text-3xl sm:text-5xl font-semibold md:font-bold mb-8 text-center text-black "
             >
               Contact Us for Yours
             </motion.h1>

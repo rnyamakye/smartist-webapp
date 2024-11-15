@@ -33,12 +33,13 @@ const Contact = () => {
 
   return (
     <main className="container w-[90vw] mx-auto px-4 py-[50px] flex-col items-center flex md:py-[120px] lg:py-[50px]">
+      <img src="/PngItem_296322.png" className="fixed -z-10 opacity-50" />
       <motion.h1
         variants={fadeIn("up", 0.5)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.1 }}
-        className="text-3xl sm:text-5xl w-[90vw] font-bold py-[50px] text-center"
+        className="text-3xl sm:text-5xl w-[90vw] font-bold py-[50px] text-white text-center z-10"
       >
         Contact Us
       </motion.h1>
@@ -51,7 +52,9 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.1 }}
           className="lg:w-[40%]"
         >
-          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-white">
+            Get in Touch
+          </h2>
           {successMessage && (
             <div className="mb-4 p-2 text-green-600 bg-green-100 border border-green-300 rounded">
               {successMessage}

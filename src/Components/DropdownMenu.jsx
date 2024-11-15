@@ -40,7 +40,7 @@ export default function DropdownMenu() {
 
   return (
     <div className="">
-      <button className="dropdown-container bg-slate-800 p-2 rounded-full ">
+      <button className="dropdown-container  p-2 rounded-full ">
         <HiMenuAlt3
           className="md:text-4xl lg:text-4xl sm:text-2xl text-white"
           onClick={toggleDropdown}

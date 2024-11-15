@@ -1,5 +1,7 @@
 body {
   background-color: rgb(208, 208, 208);
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 .no-scroll {
   overflow-x: hidden;
