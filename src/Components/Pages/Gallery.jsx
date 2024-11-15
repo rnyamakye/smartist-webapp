@@ -225,7 +225,7 @@ const Gallery = () => {
             className="sticky h-[500px] top-10 w-[500px] opacity-30 right- -z-[20]"
           />
 
-          <section className=" lg:px-10 sm:px-5 relative -top-[300px]">
+          <section className=" lg:px-10 sm:px-5 relative -top-[350px]">
             <div className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 sm:px-5">
               {artworks.map((artwork, index) => (
                 <Artworks key={index} {...artwork} />
@@ -235,7 +235,7 @@ const Gallery = () => {
           <section className="text-center relative pb-[100px] -top-[50px]">
             <img
               src="/—Pngtree—stylish ripped torn paper texture_8797803.png"
-              className="absolute md:-top-[500px] object-cover -top-[180px] -z-10 md:size-[1000px] w-[100vw] h-[500px] md:right-[130px]"
+              className="absolute md:-top-[500px] object-cover -top-[400px] -z-10 md:size-[1000px] size-[900px]  md:right-[130px]"
             />
             <motion.h1
               variants={fadeIn("up", 0.5)}

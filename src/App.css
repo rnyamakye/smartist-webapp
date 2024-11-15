@@ -62,9 +62,9 @@ footer {
   transition: 500ms ease;
   background: linear-gradient(
     313deg,
-    rgba(14, 15, 13, 0.9) 15%,
-    rgba(41, 41, 53, 0.9) 50%,
-    rgba(44, 16, 27, 0.9) 100%
+    rgba(14, 15, 13, 0.98) 15%,
+    rgba(41, 41, 53, 0.98) 50%,
+    rgba(44, 16, 27, 0.98) 100%
   );
 }
 .dropdown-menu.inactive {
@@ -73,7 +73,7 @@ footer {
   transform: translateY(50px);
   transform: scaleY(0.5);
   transform-origin: top;
-  transition: 300ms ease;
+  transition: 500ms ease;
 }
 
 @media screen and (min-width: 548px) {

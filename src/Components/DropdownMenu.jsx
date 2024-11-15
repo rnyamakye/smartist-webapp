@@ -54,12 +54,12 @@ export default function DropdownMenu() {
       </button>
       <div className="-z-50">
         <div
-          className={` dropdown-menu absolute mt-3 sm:w-full -right-[0%] justify-center sm:py-10 text-white text-center flex flex-col gap-5 my-4 rounded-2xl duration-700 ease-in-out ${
+          className={` dropdown-menu absolute mt-3 sm:w-full -right-[0%] justify-center sm:py-10 opacity-100 text-white text-center flex flex-col gap-5 my-4 rounded-2xl duration-700 ease-in-out ${
             isOpen ? "active" : "inactive"
           }`}
           ref={menuRef}
         >
-          <div className="relative font-semibold md:flex-col md:flex grid grid-cols-2 gap-3 text-white ">
+          <div className="relative font-semibold md:flex-col md:flex flex flex-col gap-3 text-white ">
             <NavLink
               to="/"
               className="sm:block px-4 py-2  md:hidden hover:text-white/50"
